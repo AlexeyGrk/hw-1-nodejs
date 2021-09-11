@@ -2,6 +2,11 @@
   "name": "hw-1-nodejs",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
   "repository": "https://github.com/AlexeyGrk/hw-1-nodejs.git",
   "author": "AlexeyGrk <alexgmirko@gmail.com>",
   "license": "MIT",
