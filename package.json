@@ -10,7 +10,9 @@
   "repository": "https://github.com/AlexeyGrk/hw-1-nodejs.git",
   "author": "AlexeyGrk <alexgmirko@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^8.2.0"
+  },
   "devDependencies": {
     "nodemon": "^2.0.12"
   }
