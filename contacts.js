@@ -7,7 +7,7 @@ const getContactById = async (contactId) => {
   if (!contact) {
     return null;
   }
-  return contacts;
+  return contact;
 };
 const removeContact = async (contactId) => {};
 const addContact = async (name, email, phone) => {};
