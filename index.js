@@ -1,9 +1,7 @@
 const { Command } = require("commander");
 const contactsOperations = require("./contacts.js");
 
-// listContacts + ; getContactById + ; removeContact+ ;addContact+ ;
 function myParseInt(value, dummyPrevious) {
-  // parseInt takes a string and a radix
   const parsedValue = parseInt(value, 10);
   if (isNaN(parsedValue)) {
     throw new commander.InvalidArgumentError("Not a number.");
@@ -40,7 +38,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         return console.log(await contactsOperations.removeContact(id));
 
       case "update":
-        return await contactsOperations.updateContact();
+        return await contactsOperations.updateContacts();
 
       default:
         console.warn("\x1B[31m Unknown action type!");
