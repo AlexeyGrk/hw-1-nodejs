@@ -1,5 +1,5 @@
 const { Command } = require("commander");
-const contactsOperations = require("./contacts");
+const contactsOperations = require("./contacts.js");
 
 // listContacts + ; getContactById - ; removeContact- ;addContact- ;
 
@@ -24,13 +24,16 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       case "getContactById":
         return console.log(await contactsOperations.getContactById(id));
 
-      case "add":
-        // ... name email phone
-        break;
+      case "addContact":
+        return console.log(
+          await contactsOperations.addContact({ name, email, phone, id })
+        );
 
       case "remove":
         // ... id
         break;
+      case "update":
+        return await contactsOperations.updateContact();
 
       default:
         console.warn("\x1B[31m Unknown action type!");
